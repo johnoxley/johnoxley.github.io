@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello, World!</title>
+    <title>Bouncing Padlock</title>
+    <style>
+        body {
+            background-color: #002b36; /* Base03 */
+            color: #839496; /* Base0 */
+            font-family: monospace;
+            overflow: hidden;
+        }
+
+        #padlock {
+            font-size: 72pt;
+            position: absolute;
+            animation: movePadlock 5s infinite;
+        }
+
+        @keyframes movePadlock {
+            0% {
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+            }
+
+            25% {
+                top: 0;
+                left: 100%;
+                transform: translate(-100%, 0);
+            }
+
+            50% {
+                top: 100%;
+                left: 100%;
+                transform: translate(-100%, -100%);
+            }
+
+            75% {
+                top: 100%;
+                left: 0;
+                transform: translate(0, -100%);
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div id="padlock">&#x1F512;</div>
 </body>
 </html>
+
